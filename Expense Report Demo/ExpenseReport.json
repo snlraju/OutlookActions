@@ -1,0 +1,49 @@
+{
+	"@type": "MessageCard",
+	"@context": "http://schema.org/extensions",
+    "summary": "Expense Report (ER-321377) for 249.25 USD is available ",
+    "themeColor": "188D18",
+    "sections": [
+        {
+            "heroImage": {
+                "image": "https://filedepot.blob.core.windows.net/blob/expense-logo.png"
+            }
+        },
+        {
+            "startGroup": true,
+            "activityTitle": "Expense Report (ER-321377) for **249.25 USD** is available",
+			"activitySubtitle": "Pending approval",
+            "facts": [
+				{
+					"name": "Status:",
+					"value": "Pending Approval"
+			    },
+				{
+					"name": "Total amount:",
+					"value": "249.25 USD"
+			    },
+			    {
+					"name": "For:",
+					"value": "Miguel Garcia"
+			    }
+			],
+            "potentialAction": [
+       		    {
+                    "@type": "HttpPOST",
+                    "name": "Approve",
+                    "target": "https://..."
+                },{
+                    "@type": "HttpPOST",
+                    "name": "Decline",
+                    "target": "https://..."
+                },{
+        			"@type": "OpenUri",
+        			"name": "View in Expense",
+        			"targets": [
+        				{ "os": "default", "uri": "https://..." }
+        			]
+        		}
+            ]
+        }
+    ]
+}
